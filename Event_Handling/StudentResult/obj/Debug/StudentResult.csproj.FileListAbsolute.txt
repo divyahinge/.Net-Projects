@@ -1,0 +1,7 @@
+D:\.NET\18Feb\Event_Handling\StudentResult\obj\Debug\StudentResult.csproj.AssemblyReference.cache
+D:\.NET\18Feb\Event_Handling\StudentResult\obj\Debug\StudentResult.csproj.CoreCompileInputs.cache
+D:\.NET\18Feb\Event_Handling\StudentResult\bin\Debug\StudentResult.exe.config
+D:\.NET\18Feb\Event_Handling\StudentResult\bin\Debug\StudentResult.exe
+D:\.NET\18Feb\Event_Handling\StudentResult\bin\Debug\StudentResult.pdb
+D:\.NET\18Feb\Event_Handling\StudentResult\obj\Debug\StudentResult.exe
+D:\.NET\18Feb\Event_Handling\StudentResult\obj\Debug\StudentResult.pdb

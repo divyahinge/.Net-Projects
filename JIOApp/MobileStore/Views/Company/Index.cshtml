@@ -1,0 +1,20 @@
+﻿@using BOL
+@{
+    ViewBag.Title = "Index";
+}
+
+<hr />
+<a href="/home/index">Home</a> | <a href="/product/index">Product</a> | <a href="/customer/index">Customer</a> | <a href="/company/index">Company</a>
+<hr />
+<h2>Company Names</h2>
+<hr />
+@{
+    List<Company> allComp = ViewData["company"] as List<Company>;
+    foreach (Company comp in allComp)
+    {
+        <p><a href="/portal/index/@comp.CompanyId">@comp.CompanyName</a></p>
+    }
+}
+
+<br />
+<a href="/company/addcompany">Add New Company</a>

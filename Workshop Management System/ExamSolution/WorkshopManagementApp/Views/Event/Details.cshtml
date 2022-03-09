@@ -1,0 +1,20 @@
+﻿@using WorkshopManagementApp.Models;
+@{
+    ViewBag.Title = "Details";
+}
+
+<br />
+<hr />
+<h2> Workshop Details</h2>
+<hr />
+
+@{
+    Workshop shop = ViewData["shop"] as Workshop;
+    <p>Workshop Name : @shop.Name </p>
+    <p>Topic : @shop.Topic </p>
+    <p>Description : @shop.Description</p>
+    <p>Presentor : @shop.Presentor</p>
+    <p>Location : @shop.Location</p>
+    <p><a href="/event/edit/@shop.Id" class="btn btn-primary btn-lg">Edit Details</a>  &nbsp;&nbsp;<a href="/event/delete/@shop.Id" class="btn btn-primary btn-lg">Delete</a></p>
+}
+@*<a href="/event/Create" class="btn btn-primary btn-lg">Add New Event</a>*@

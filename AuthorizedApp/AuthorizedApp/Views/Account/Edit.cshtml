@@ -1,0 +1,30 @@
+﻿@using AuthorizedApp.Models;
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+<hr />
+@{
+    User user = ViewData["user"] as User;
+}
+<form method="post" action="/account/edit">
+    <div class="form-group">
+
+        <input type="hidden" class="form-control" id="id" name="id" value="@user.Id">
+    </div>
+    <div class="form-group">
+        <label for="username">User Name:</label>
+        <input type="username" class="form-control" id="username" name="username" value="@user.UserName">
+    </div>
+    <div class="form-group">
+        <label for="email">Email address:</label>
+        <input type="email" class="form-control" id="email" name="email" value="@user.Email">
+    </div>
+    <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="password" name="password" value="@user.Password">
+    </div>
+
+    <button type="submit" class="btn btn-default">Update</button>
+</form>

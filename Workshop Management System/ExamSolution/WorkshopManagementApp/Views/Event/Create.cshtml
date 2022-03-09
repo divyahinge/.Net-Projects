@@ -1,0 +1,65 @@
+﻿
+@model WorkshopManagementApp.Models.Workshop
+
+@{
+    ViewBag.Title = "Create";
+}
+<hr />
+<h2>Add new Workshop</h2>
+<hr />
+
+
+@using (Html.BeginForm())
+{
+<div class="form-horizontal">
+
+    <hr />
+    <div class="form-group">
+        @Html.LabelFor(x => x.Id, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(x => x.Id, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.Id, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.Name, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.Name, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.Topic, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(x => x.Topic, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.Topic, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.Description, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.Description, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.Presentor, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(x => x.Presentor, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.Presentor, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.Location, new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(x => x.Location, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.Location, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Add" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}

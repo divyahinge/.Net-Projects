@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "AddToStore";
+}
+
+<h2>Add To Store</h2>
+
+<form method="post" action="/store/addtostore">
+    <div class="form-group">
+        <label for="email">Product ID:</label>
+        <input type="number" readonly class="form-control" id="id" value="@ViewBag.item.Id" name="id" >
+    </div>
+    <div class="form-group">
+        <label for="pwd">Quantity:</label>
+        <input type="number" class="form-control" id="quantity" value="@ViewBag.item.Quantity" name="quantity">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>

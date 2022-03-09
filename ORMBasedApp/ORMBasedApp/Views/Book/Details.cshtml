@@ -1,0 +1,14 @@
+﻿@using ORMBasedApp.Models;
+@{
+    ViewBag.Title = "Details";
+}
+<hr />
+<h2>Book Details</h2>
+<hr />
+
+@{
+    Book book = ViewData["book"] as Book;
+    <p>Book Name : @book.Name</p>
+    <p>Book Author : @book.Author</p>
+    <p>Book Price : @book.Cost</p>
+}

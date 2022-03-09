@@ -1,0 +1,18 @@
+﻿@using Flipkart.Models;
+@using System.Collections.Generic;
+
+@{
+    ViewBag.Title = "Index";
+}
+<hr />
+<a herf="/home/details">Fashion</a> | <a href="">About</a> | <a href="">Help Centre</a> | <a href="/store/index">Store</a> | <a href="">Top Offers</a>
+<hr />
+<h2>Store</h2>
+<hr />
+@{
+    List<Item> items = ViewBag.items.GetAllItems();
+    foreach (Item item in items)
+    {
+        <p>Id : @item.Id   @*  Name : @ViewBag.item.Name *@ &nbsp;  Quantity : @item.Quantity  <a href="/store/edit/@item.Id">Edit</a> | <a href="/store/remove/@item.Id">Remove</a></p>
+    }
+}

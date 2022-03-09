@@ -1,0 +1,22 @@
+﻿@model BOL.Company
+@{
+    ViewBag.Title = "Index";
+}
+
+<hr />
+<a href="/home/index">Home</a> | <a href="/product/index">Product</a> | <a href="/customer/index">Customer</a> | <a href="/company/index">Company</a>
+<hr />
+<h2>Company Dashboard</h2>
+<div>
+    <p>Company Id = @Model.CompanyId</p>
+    <p>Company Name = @Model.CompanyName</p>
+    <p>Company Contact No = @Model.CompanyContactNo</p>
+    <p>Company Product = @Model.CompanyProduct</p>
+
+    <div class="row">
+        <div class="col-sm-4" style="background-color:hotpink;">@Html.Partial("customerdetails")</div><br />
+        <div class="col-sm-8" style="background-color:cadetblue;">@Html.Partial("productdetails")</div>
+
+    </div>
+</div>
+

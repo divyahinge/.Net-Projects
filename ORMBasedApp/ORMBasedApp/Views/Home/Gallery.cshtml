@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Gallery";
+}
+
+<h2>Gallery</h2>
+<hr />
+
+<div class="container">
+    <button class="btn-success">Get books available</button>
+    <br />
+    <ol id="flowers" class="list-group"></ol>
+</div>
+
+<script>
+    console.log("Client Side  Javascript Code execution using Browser JS engine....");
+    $(document).ready(function () {
+        $("button").click(()=> {
+                console.log("button is clicked....");
+                $.get("/flower/index", (data, status) => {
+                console.log(JSON.stringify(data));
+                $("#flowers").empty();
+                    for (var i = 0; i < data.length; i++) {
+                        var title = data[i].Name;
+                        $("#flowers").append("<li class='list-group-item'>" +title+"</li>" )
+                }
+            })
+        })
+    });
+</script>

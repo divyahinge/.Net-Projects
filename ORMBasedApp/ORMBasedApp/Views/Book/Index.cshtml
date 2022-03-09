@@ -1,0 +1,18 @@
+﻿@using ORMBasedApp.Models;
+@{
+    ViewBag.Title = "Index";
+}
+
+<hr />
+<h2> BOOk Index</h2>
+<hr />
+
+@{ 
+    List<Book> allBooks =  ViewData["books"] as List<Book>;
+    foreach(Book book in allBooks)
+            {
+               <p>@book.Name  <a href="/book/details/@book.Id">Details</a> |<a href="/book/edit/@book.Id">Update</a>|<a href="/book/delete/@book.Id">Delete</a></p>
+            }
+}
+
+<a href="/book/addnew">Add New Book</a>

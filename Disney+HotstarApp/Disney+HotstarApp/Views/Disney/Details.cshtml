@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+}
+
+<hr />
+<a href="/home/index">Home</a> | <a href="/home/tv">Tv</a> | <a href="/home/movies">Movies</a> | <a href="/home/sports">Sport</a>
+<hr />
+
+
+<h2>Details</h2>
+
+
+<p><img src="@ViewBag.movie.ImagUrl" /></p>
+<hr />
+<div class="review">
+    <p>Name : @ViewBag.movie.Id </p>
+    <p>Name : @ViewBag.movie.Name </p>
+    <p>Genre : @ViewBag.movie.Genre </p>
+    <p>Year of Release : @ViewBag.movie.YearOfRelease </p>
+    <p>Rating : @ViewBag.movie.Rating </p>
+    <p>Review : @ViewBag.movie.Review </p>
+    <form action="/movie/addtowatchlist">
+        <input type="number" value="@ViewBag.movie.Id" id="id" name="id" />
+        <input type="text" value="@ViewBag.movie.Name" id="name" name="name" />
+        <input type="submit"/>
+    </form>
+    @*<a href="/movie/addtowatchlist/@ViewBag.movie.Id/@ViewBag.movie.Name">Add to Watchlist</a>*@
+</div>

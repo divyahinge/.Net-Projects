@@ -1,0 +1,15 @@
+﻿@using Disney_HotstarApp.Models;
+@using System.Collections.Generic;
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@{
+    List<Feedback> list = ViewBag.WatchList.GetAllMovies();
+    foreach(Feedback feedback in list)
+            {
+    <p>Movie Id :@feedback.Id   Movie Name:@feedback.Name  Review :@feedback.Review  <a href="/movie/edit/@feedback.Id">Edit</a> | <a href="/movie/remove/@feedback.Id">Remove</a></p>
+            }
+}
+

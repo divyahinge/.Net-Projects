@@ -1,0 +1,6 @@
+D:\.NET\28 Feb\JIOApp\BOL\bin\Debug\BOL.dll
+D:\.NET\28 Feb\JIOApp\BOL\bin\Debug\BOL.pdb
+D:\.NET\28 Feb\JIOApp\BOL\obj\Debug\BOL.csproj.AssemblyReference.cache
+D:\.NET\28 Feb\JIOApp\BOL\obj\Debug\BOL.csproj.CoreCompileInputs.cache
+D:\.NET\28 Feb\JIOApp\BOL\obj\Debug\BOL.dll
+D:\.NET\28 Feb\JIOApp\BOL\obj\Debug\BOL.pdb

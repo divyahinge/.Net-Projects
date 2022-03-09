@@ -1,0 +1,15 @@
+﻿ @using AuthorizedApp.Models;
+@{
+    ViewBag.Title = "Index";
+}
+<br />
+<h2>User Details</h2>
+<hr />
+@{
+    List<User> user = ViewData["users"] as List<User>;
+    foreach(User us in user)
+    {
+        <p>@us.UserName  &nbsp;&nbsp; <a href="/account/edit/@us.Id" class="btn btn-primary ">Update</a>  |   <a href="/account/delete/@us.Id" class="btn btn-primary ">Delete</a></p>
+     }
+}
+

@@ -1,0 +1,28 @@
+﻿@using AuthorizedApp.Models;
+
+@{
+    ViewBag.Title = "Details";
+}
+<br />
+
+
+<hr>
+<a href="/home/index"><img src="~/Images/home.jpg" width="28" height="28" />Home</a>  |  <a href="/account/signup"><img src="~/Images/sign.png" width="25" height="25" />Sign-Up</a>  |  <a href="/user/login"><img src="~/Images/login.jpg" width="25" height="25" />Login</a>  |  <a href="/user/logout"><img src="~/Images/logout.png" width="25" height="25" />Logout</a>   |  <a href="/user/details">View Profile</a>
+<hr />
+
+<h2>Details</h2>
+<hr />
+@{
+    User user = ViewData["users"] as User;
+    if (user == null)
+    {
+        <h1>No User Logged In.....</h1>
+    }
+    else
+    {
+
+    <p>User Name - @user.UserName</p>
+    <p>Email     - @user.Email</p>
+    <p><a href="/account/edit/@user.Id" class="btn btn-primary ">Update</a> &nbsp;&nbsp;  <a href="/account/delete/@user.Id" class="btn btn-primary ">Delete Account</a>  &nbsp;&nbsp;  <a href="/user/logout" class="btn btn-primary ">Logout</a></p>
+        }
+    }

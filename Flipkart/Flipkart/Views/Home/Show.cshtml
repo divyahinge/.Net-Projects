@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Show";
+}
+
+
+<hr />
+<a herf="/home/details">Fashion</a> | <a href="">About</a> | <a href="">Help Centre</a> | <a href="">Top Offers</a>
+<hr />
+
+<h2>Product Details</h2>
+<hr />
+<img src="@ViewBag.product.ImageUrl"/>
+<br />
+<br />
+<p>Id : @ViewBag.product.Id</p>
+<p>Name : @ViewBag.product.Name</p>
+<p>Info : @ViewBag.product.Info</p>
+<p>Price : @ViewBag.product.Price</p>
+<p>Quantity : @ViewBag.product.Quantity</p>
+<br />
+<br />
+<a href="/store/addtostore/@ViewBag.product.Id">Add to Store</a>

@@ -1,0 +1,20 @@
+﻿@using WorkshopManagementApp.Models;
+@{
+    ViewBag.Title = "Index";
+}
+<br />
+<hr />
+<h2>Index</h2>
+<hr />
+
+@{ 
+    List<Workshop> shop = ViewData["shop"] as List<Workshop>;
+    foreach(Workshop wshop in shop)
+     {
+    <p><h4>@wshop.Name</h4><a href="/event/details/@wshop.Id" class="btn btn-primary btn-lg">Show Details</a> </p><hr />
+     }
+}
+<hr />
+<br />
+<br />
+<a href="/event/Create" class="btn btn-primary btn-lg">Add New Event</a>

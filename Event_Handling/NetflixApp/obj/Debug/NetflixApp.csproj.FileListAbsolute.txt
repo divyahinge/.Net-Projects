@@ -1,0 +1,7 @@
+D:\.NET\18Feb\Event_Handling\NetflixApp\obj\Debug\NetflixApp.csproj.AssemblyReference.cache
+D:\.NET\18Feb\Event_Handling\NetflixApp\obj\Debug\NetflixApp.csproj.CoreCompileInputs.cache
+D:\.NET\18Feb\Event_Handling\NetflixApp\bin\Debug\NetflixApp.exe.config
+D:\.NET\18Feb\Event_Handling\NetflixApp\bin\Debug\NetflixApp.exe
+D:\.NET\18Feb\Event_Handling\NetflixApp\bin\Debug\NetflixApp.pdb
+D:\.NET\18Feb\Event_Handling\NetflixApp\obj\Debug\NetflixApp.exe
+D:\.NET\18Feb\Event_Handling\NetflixApp\obj\Debug\NetflixApp.pdb

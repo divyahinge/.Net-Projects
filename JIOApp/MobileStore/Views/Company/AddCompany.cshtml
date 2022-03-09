@@ -1,0 +1,36 @@
+﻿@model BOL.Company
+@{
+    ViewBag.Title = "AddCompany";
+}
+<h2>Add Company Details</h2>
+<hr />
+
+<div class="container">
+
+    <!--<p>@this.ViewBag.displayMessage</p>-->
+
+    <form method="post" action="/company/addcompany">
+
+        <div class="form-group">
+            <label name="id">Company Id: </label>
+            <input type="number" class="form-control" id="companyid" placeholder="Enter  id" name="companyid">
+        </div>
+        <div class="form-group">
+            <label for="fullname">Company Name:</label>
+            <input type="text" class="form-control" id="companyname" placeholder="Enter  Name" name="companyname">
+        </div>
+
+        <div class="form-group">
+            <label for="ContactNo">Contact No:</label>
+            <input type="text" class="form-control" id="companycontactNo" placeholder="Enter  contact" name="companycontactNo">
+        </div>
+
+        <div class="form-group">
+            <label for="product">Product Published:</label>
+            <input type="text" class="form-control" id="companyproduct" placeholder="Enter  product" name="companyproduct">
+        </div>
+
+        <button type="submit" class="btn btn-default">Add Company</button>
+    </form>
+</div>
+

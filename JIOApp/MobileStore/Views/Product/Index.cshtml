@@ -1,0 +1,49 @@
+﻿@using BOL;
+@{
+    ViewBag.Title = "Index";
+}
+
+<hr />
+<a href="/home/index">Home</a> | <a href="/product/index">Product</a> | <a href="/customer/index">Customer</a> | <a href="/company/index">Company</a>
+<hr />
+<h2>PRODUCT DETAILS</h2>
+<hr />
+
+@{
+    List<Product> allprod = ViewData["product"] as List<Product>;
+
+    <table border="1" cellspacing="5" cellpadding="1">
+        <thead>
+            <tr>
+                <th><center>Product Id</center></th>
+                <th><center>Title</center></th>
+                <th><center>Description</center></th>
+                <th><center>Price</center></th>
+                <th><center>Quantity</center></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @{
+                foreach (Product prod in allprod)
+                {
+                    <tr>
+                        <td><center>@prod.Id</center></td>
+                        <td><center>@prod.Title</center></td>
+                        <td><center>@prod.Info</center></td>
+                        <td><center>@prod.UnitPrice</center></td>
+                        <td><center>@prod.Quantity</center></td>
+                        <td><center><a href="/product/edit/@prod.Id">Edit</a></center></td>
+                        <td><center><a href="/product/remove/@prod.Id">Remove</a></center></td>
+                    </tr>
+                }
+            }
+
+        </tbody>
+
+    </table>
+
+}
+<br />
+<br />
+<a href="/product/addproduct">Add new Product</a>
